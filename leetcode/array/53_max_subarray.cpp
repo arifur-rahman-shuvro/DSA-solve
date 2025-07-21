@@ -3,7 +3,7 @@
 ║ Problem    : Leetcode 53 - Maximum Subarray                      ║
 ║ Author     : Arifur Rahman Shuvro                                ║
 ║ Date       : 21 July, 2025                                       ║
-║ Github     : https://github.com/arifur-rahman-shuvro     ║
+║ Github     : https://github.com/arifur-rahman-shuvro             ║
 ╚══════════════════════════════════════════════════════════════════╝
 
 Description:
