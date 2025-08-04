@@ -1,10 +1,11 @@
 /*
-╔══════════════════════════════════════════════════════════════════╗
-║ Problem    : Leetcode 1 - Two Sum                                ║
-║ Author     : Arifur Rahman Shuvro                                ║
-║ Date       : 30 July, 2025                                       ║
-║ Github     : https://github.com/arifur-rahman-shuvro             ║
-╚══════════════════════════════════════════════════════════════════╝
+╔══════════════════════════════════════════════════════════════════════════════╗
+║ Problem    : Print sum of N to M                                             ║
+║ Author     : Arifur Rahman Shuvro                                            ║
+║ Credit     : Concept learned from "A2Z Striver" Playlist                     ║
+║ Date       : 02 July, 2025 (Repo Changed)                                    ║
+║ GitHub     : https://github.com/arifur-rahman-shuvro                         ║
+╚══════════════════════════════════════════════════════════════════════════════╝
 */
 
 /*
