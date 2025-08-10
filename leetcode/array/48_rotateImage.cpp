@@ -82,35 +82,23 @@ public:
 };
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+    int n;
+    cin >> n;
 
-    try {
-        int n;
-        if (!(cin >> n) || n <= 0)
-            throw invalid_argument("Invalid size for square matrix.");
-
-        vector<vector<int>> matrix(n, vector<int>(n));
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                if (!(cin >> matrix[i][j]))
-                    throw invalid_argument("Invalid input for matrix element.");
-            }
-        }
-
-        Solution sol;
-
-        sol.rotateMatrix(matrix);
-
-        for (const auto &row : matrix) {
-            for (const auto &val : row)
-                cout << val << ' ';
-            cout << '\n';
+    vector<vector<int>> matrix(n, vector<int>(n));
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            cin >> matrix[i][j];
         }
     }
-    catch (const exception &ex) {
-        cerr << "Error: " << ex.what() << '\n';
-        return 1;
+
+    Solution sol;
+    sol.rotateMatrix(matrix);
+
+    for (const auto &row : matrix) {
+        for (int val : row)
+            cout << val << ' ';
+        cout << '\n';
     }
 
     return 0;
