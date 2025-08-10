@@ -1,9 +1,11 @@
-/* 
-Problem: Leetcode 169 - Majority Element
-Author: Arifur Rahman Shuvro
-Date: 10 July, 2025
-GitHub: https://github.com/arifur-rahman-shuvro
-
+/*
+╔══════════════════════════════════════════════════════════════════════════════╗
+║ Problem    : Leetcode 169 - Majority Elementnd                               ║
+║ Author     : Arifur Rahman Shuvro                                            ║
+║ Date       : 10 July, 2025                                                   ║
+║ GitHub     : https://github.com/arifur-rahman-shuvro                         ║
+╚══════════════════════════════════════════════════════════════════════════════╝ 
+ 
 Description:
 Given an array of size n, return the majority element.
 The majority element is the element that appears more than ⌊n / 2⌋ times.
