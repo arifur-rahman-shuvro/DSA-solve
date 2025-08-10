@@ -1,8 +1,10 @@
 /*
-Problem: Leetcode 1752 - Check if Array Is Sorted and Rotated
-Author: Arifur Rahman Shuvro
-Date: 19 July, 2025
-GitHub: https://github.com/arifur-rahman-shuvro
+╔══════════════════════════════════════════════════════════════════════════════╗
+║ Problem    : Leetcode 1752 - Check if Array Is Sorted and Rotated            ║
+║ Author     : Arifur Rahman Shuvro                                            ║
+║ Date       : 19 July, 2025                                                   ║
+║ GitHub     : https://github.com/arifur-rahman-shuvro                         ║
+╚══════════════════════════════════════════════════════════════════════════════╝
 
 Description:
 Given an integer array, check whether it was originally sorted in non-decreasing order and then rotated some number of times.
