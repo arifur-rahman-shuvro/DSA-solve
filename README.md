@@ -112,9 +112,8 @@ And many programming blogs and tutorials
 
 This repository is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
+---
+
 Visit my [GitHub Profile](https://github.com/arifur-rahman-shuvro) for more projects.
-
-
-
 
 Happy Coding & Pray For Me!!!
