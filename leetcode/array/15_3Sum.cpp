@@ -115,32 +115,20 @@ public:
 };
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+    int n;
+    cin >> n;
 
-    try {
-        int n;
-        if (!(cin >> n) || n < 3)
-            throw invalid_argument("Array size must be at least 3.");
+    vector<int> nums(n);
+    for (int i = 0; i < n; i++)
+        cin >> nums[i];
 
-        vector<int> nums(n);
-        for (auto &num : nums) {
-            if (!(cin >> num))
-                throw invalid_argument("Invalid input for array element.");
-        }
+    Solution sol;
+    vector<vector<int>> result = sol.threeSum(nums);
 
-        Solution sol;
-        vector<vector<int>> result = sol.threeSum(nums);
-
-        for (const auto &triplet : result) {
-            for (const auto &num : triplet)
-                cout << num << ' ';
-            cout << '\n';
-        }
-    }
-    catch (const exception &ex) {
-        cerr << "Error: " << ex.what() << '\n';
-        return 1;
+    for (const auto &triplet : result) {
+        for (int num : triplet)
+            cout << num << ' ';
+        cout << '\n';
     }
 
     return 0;
