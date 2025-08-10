@@ -76,34 +76,23 @@ public:
     }
 };
 
-int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+int main(){
+    int n, m;
+    cin >> n >> m;
 
-    try {
-        int n, m;
-        if (!(cin >> n >> m) || n <= 0 || m <= 0)
-            throw invalid_argument("Invalid dimensions for matrix.");
-
-        vector<vector<int>> matrix(n, vector<int>(m));
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
-                if (!(cin >> matrix[i][j]))
-                    throw invalid_argument("Invalid input for matrix element.");
-            }
+    vector<vector<int>> matrix(n, vector<int>(m));
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            cin >> matrix[i][j];
         }
-
-        Solution sol;
-        vector<int> result = sol.spiralMatrix(matrix);
-
-        for (const auto &val : result)
-            cout << val << ' ';
-        cout << '\n';
     }
-    catch (const exception &ex) {
-        cerr << "Error: " << ex.what() << '\n';
-        return 1;
-    }
+
+    Solution sol;
+    vector<int> result = sol.spiralMatrix(matrix);
+
+    for (int val : result)
+        cout << val << ' ';
+    cout << '\n';
 
     return 0;
 }
