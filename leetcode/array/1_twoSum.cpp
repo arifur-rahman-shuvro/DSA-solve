@@ -64,37 +64,24 @@ public:
 };
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+    int n, target;
+    cin >> n;
 
-    try {
-        int n, target;
-        if (!(cin >> n) || n < 2)
-            throw invalid_argument("Invalid input for array size (must be >= 2).");
+    vector<int> nums(n);
+    for (int i = 0; i < n; i++)
+        cin >> nums[i];
 
-        vector<int> nums(n);
-        for (auto &num : nums) {
-            if (!(cin >> num))
-                throw invalid_argument("Invalid input for array element.");
-        }
+    cin >> target;
 
-        if (!(cin >> target))
-            throw invalid_argument("Invalid input for target.");
+    Solution sol;
+    vector<int> result = sol.twoSum(nums, target);
 
-        Solution sol;
-        vector<int> result = sol.twoSum(nums, target);
-
-        if (result.empty()) {
-            cout << "No valid pair found.\n";
-        } else {
-            for (const auto &idx : result)
-                cout << idx << ' ';
-            cout << '\n';
-        }
-    }
-    catch (const exception &ex) {
-        cerr << "Error: " << ex.what() << '\n';
-        return 1;
+    if (result.empty()) {
+        cout << "No valid pair found\n";
+    } else {
+        for (int idx : result)
+            cout << idx << ' ';
+        cout << '\n';
     }
 
     return 0;
