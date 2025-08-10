@@ -81,33 +81,21 @@ public:
 };
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+    int n;
+    cin >> n;
 
-    try {
-        int n;
-        if (!(cin >> n) || n < 0)
-            throw invalid_argument("Invalid input for array size.");
-
-        vector<int> nums(n);
-        for (auto &num : nums) {
-            if (!(cin >> num))
-                throw invalid_argument("Invalid input for array element.");
-            if (num < 0 || num > 2)
-                throw out_of_range("Array elements must be 0, 1, or 2.");
-        }
-
-        Solution sol;
-        sol.color_sort(nums);
-
-        for (const auto &num : nums)
-            cout << num << ' ';
-        cout << '\n';
+    vector<int> nums(n);
+    for (int &num : nums) {
+        cin >> num;
     }
-    catch (const exception &ex) {
-        cerr << "Error: " << ex.what() << '\n';
-        return 1;
+
+    Solution sol;
+    sol.color_sort(nums);
+
+    for (int num : nums) {
+        cout << num << ' ';
     }
+    cout << '\n';
 
     return 0;
 }
