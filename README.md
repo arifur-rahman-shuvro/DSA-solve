@@ -106,7 +106,6 @@ Contributions are welcome! If you want to add new solutions, optimize existing o
 
 And many programming blogs and tutorials
 
-## License
 
 ## License
 
