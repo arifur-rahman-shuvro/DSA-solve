@@ -1,8 +1,10 @@
 /*
-Problem: Remove Duplicates from Sorted Array (Leetcode style)
-Author: Arifur Rahman Shuvro
-Date: 19 July, 2025
-GitHub: https://github.com/arifur-rahman-shuvro
+╔══════════════════════════════════════════════════════════════════╗
+║ Problem    : Remove Duplicates from Sorted Array (Leetcode style)║
+║ Author     : Arifur Rahman Shuvro                                ║
+║ Date       : 19 July, 2025                                       ║
+║ Github     : https://github.com/arifur-rahman-shuvro             ║
+╚══════════════════════════════════════════════════════════════════╝
 
 Description:
 Given a sorted array nums, remove the duplicates in-place such that each element appears only once 
@@ -17,16 +19,17 @@ Time Complexity: O(n)
 Space Complexity: O(1)
 */
 
-//#include<bits/stdc++.h>
 #include <iostream>
 #include <vector>
+#include <stdexcept>
 using namespace std;
 
 class Solution {
 public:
-    int removeDuplicate(vector<int>& nums, int n) {
+    int removeDuplicates(vector<int>& nums) {
+        int n = nums.size();
         if (n == 0) return 0;
-        
+
         int k = 1;
         for (int i = 1; i < n; i++) {
             if (nums[i] != nums[k - 1]) {
@@ -38,22 +41,12 @@ public:
 };
 
 int main() {
-    int n;
-    cin >> n;
-    vector<int> nums(n);
-    for (int i = 0; i < n; i++) {
-        cin >> nums[i];
-    }
-
+    std::vector<int> nums = {1,1,2};
     Solution sol;
-    int newLength = sol.removeDuplicate(nums, n);
+    int len = sol.removeDuplicates(nums);
 
-    cout << "New length: " << newLength << endl;
-    cout << "Array after removing duplicates: ";
-    for (int i = 0; i < newLength; i++) {
-        cout << nums[i] << " ";
-    }
-    cout << endl;
-
+    std::cout << "New length: " << len << "\nArray: ";
+    for (int i = 0; i < len; ++i) std::cout << nums[i] << " ";
+    std::cout << "\n";
     return 0;
 }
