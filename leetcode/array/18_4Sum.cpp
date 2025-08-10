@@ -134,32 +134,22 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    try {
-        int n, target;
-        if (!(cin >> n) || n < 4)
-            throw invalid_argument("Array size must be at least 4.");
+    int n, target;
+    cin >> n;
 
-        vector<int> nums(n);
-        for (auto &num : nums) {
-            if (!(cin >> num))
-                throw invalid_argument("Invalid input for array element.");
-        }
+    vector<int> nums(n);
+    for (int i = 0; i < n; i++)
+        cin >> nums[i];
 
-        if (!(cin >> target))
-            throw invalid_argument("Invalid input for target.");
+    cin >> target;
 
-        Solution sol;
-        vector<vector<int>> result = sol.fourSum(nums, target);
+    Solution sol;
+    vector<vector<int>> result = sol.fourSum(nums, target);
 
-        for (const auto &quad : result) {
-            for (const auto &num : quad)
-                cout << num << ' ';
-            cout << '\n';
-        }
-    }
-    catch (const exception &ex) {
-        cerr << "Error: " << ex.what() << '\n';
-        return 1;
+    for (const auto &quad : result) {
+        for (int num : quad)
+            cout << num << ' ';
+        cout << '\n';
     }
 
     return 0;
